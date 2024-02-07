@@ -8,9 +8,9 @@
   /* Global Styles */
   body {
     font-family: 'Montserrat', sans-serif; /* Montserrat font with fallback to sans-serif */
-    color: #002E2C;
+    color: #000000;
     background-color: #ffffff;
-    color: #002E2C;
+    color: #000000;
   }
   
   .container {
@@ -261,9 +261,10 @@ header {
 
 
   .lead-form {
-    background-color: #ffffff;
+    background-color: #000000;
     padding: 50px 0;
     text-align: center;
+    color: #ffffff;
   }
   
   .lead-form .container {
@@ -307,8 +308,8 @@ header {
   }
   
   .lead-form button {
-    background-color: #000000;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -317,7 +318,7 @@ header {
   }
   
   .lead-form button:hover {
-    background-color: #000000;
+    background-color: #ffffff;
   }
   
   /* Footer Styles */
