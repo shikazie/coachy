@@ -257,6 +257,66 @@ header {
     text-align: center;
   }
   
+  /* Form Styles */
+  .lead-form {
+    background-color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .lead-form .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .lead-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .lead-form p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .lead-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .lead-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .lead-form label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .lead-form input[type="text"],
+  .lead-form input[type="email"],
+  .lead-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .lead-form button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .lead-form button:hover {
+    background-color: #000000;
+  }
   
   /* Footer Styles */
 footer {
