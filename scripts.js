@@ -12,5 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
       });
       
-     
+     // Update the JavaScript code to navigate to the new page
+document.querySelector('a[href="/form.html"]').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default link behavior
+  window.location.href = '/form.html'; // Navigate to the new page
+});
+
       
