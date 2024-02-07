@@ -259,8 +259,23 @@ header {
   
   /* Form Styles */
 
-
-  .lead-form {
+  .iframe-form {
+    background-color: #ffffff;
+    padding: 50px 0; /* Adjust padding as needed */
+    text-align: center;
+  }
+  
+  .iframe-form .container {
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto;
+  }
+  
+  .iframe-form iframe {
+    width: 100%;
+    height: 800px; /* Adjust height as needed */
+  }
+  
+  /* .lead-form {
     background-color: #000000;
     padding: 50px 0;
     text-align: center;
@@ -319,7 +334,7 @@ header {
   
   .lead-form button:hover {
     background-color: #ffffff;
-  }
+  } */
   
   /* Footer Styles */
 footer {
