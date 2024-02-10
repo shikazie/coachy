@@ -18,4 +18,64 @@ document.querySelector('a[href="/form.html"]').addEventListener('click', functio
   window.location.href = '/form.html'; // Navigate to the new page
 });
 
+// Blog script
+document.addEventListener('DOMContentLoaded', function() {
+  const blogCards = document.querySelectorAll('.blog-card');
+  
+  blogCards.forEach(card => {
+    card.addEventListener('click', function() {
+      const postId = this.getAttribute('data-post');
+      const post = document.getElementById(postId);
       
+      // Toggle active class to expand/collapse post
+      post.classList.toggle('active');
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const blogCards = document.querySelectorAll('.blog-card');
+  const blogPost = document.querySelectorAll('.blog-post');
+  
+  // Function to close blog post content pop-up
+  function closeBlogPost() {
+    blogPost.forEach(post => {
+      post.classList.remove('active');
+    });
+  }
+  
+  // Event listener to close blog post content when clicking outside the pop-up
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('.blog-post') && !event.target.closest('.blog-card')) {
+      closeBlogPost();
+    }
+  });
+
+  // Event listener to close blog post content when "Escape" key is pressed
+  document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+      closeBlogPost();
+    }
+  });
+  
+  // Event listener for each blog card to toggle blog post content pop-up
+  blogCards.forEach(card => {
+    card.addEventListener('click', function() {
+      const postId = this.getAttribute('data-post');
+      const post = document.getElementById(postId);
+      
+      // Close any open blog post content pop-ups
+      closeBlogPost();
+      
+      // Toggle active class to expand/collapse post
+      post.classList.toggle('active');
+    });
+  });
+});
+// Hamburger Menu
+const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
