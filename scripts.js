@@ -79,3 +79,13 @@ const hamburger = document.querySelector('.hamburger');
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
+// Dark/Light Mode toggle
+function toggleMode() {
+  var stylesheet = document.getElementById('stylesheet');
+  if (stylesheet.getAttribute('href') == 'styles-light.css') {
+      stylesheet.setAttribute('href', 'styles-dark.css'); // Switch to dark mode stylesheet
+  } else {
+      stylesheet.setAttribute('href', 'styles-light.css'); // Switch to light mode stylesheet
+  }
+}
