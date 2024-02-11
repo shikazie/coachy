@@ -466,6 +466,9 @@ footer {
   .blog {
     padding: 40px 0;
     color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .container {
@@ -493,13 +496,14 @@ footer {
   
   .blog-card-image {
     height: 200px;
+    width: 200px;
     background-size: cover;
     background-position: center;
   }
   
   .blog-card-title {
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   
   .blog-post {
@@ -542,6 +546,42 @@ footer {
   p {
     padding: 10px;
   }
+  @media only screen and (max-width: 768px) {
+    .blog-cards {
+    flex-direction: column !important;
+        
+    }
+  }
 
-
+  /* Style for Dark/Light Mode switch */
+  .toggle-label {
+    margin-top: 6px;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: black;
+    border-radius: 20px; /* Make it rounded */
+    position: relative;
+    cursor: auto;
+  }
+  
+  .toggle-label::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+  }
+  
+  #modeSwitch:checked + .toggle-label::after {
+    transform: translateX(20px); /* Move the switch to the right */
+  }
+  
+  #modeSwitch {
+    display: none; /* Hide the actual checkbox */
+  }
   

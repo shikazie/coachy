@@ -83,9 +83,11 @@ const hamburger = document.querySelector('.hamburger');
 // Dark/Light Mode toggle
 function toggleMode() {
   var stylesheet = document.getElementById('stylesheet');
-  if (stylesheet.getAttribute('href') == 'styles-light.css') {
+  var modeSwitch = document.getElementById('modeSwitch');
+  if (modeSwitch.checked) {
       stylesheet.setAttribute('href', 'styles-dark.css'); // Switch to dark mode stylesheet
   } else {
       stylesheet.setAttribute('href', 'styles-light.css'); // Switch to light mode stylesheet
   }
 }
+
